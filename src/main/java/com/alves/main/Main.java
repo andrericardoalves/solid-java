@@ -2,9 +2,7 @@ package com.alves.main;
 
 import com.alves.bo.AreaCalculator;
 import com.alves.bo.IAreaCalculator;
-import com.alves.domain.Circle;
-import com.alves.domain.Shape;
-import com.alves.domain.Square;
+import com.alves.domain.*;
 import com.alves.util.ShapesPrinter;
 
 import java.util.List;
@@ -15,8 +13,10 @@ public class Main {
         IAreaCalculator areaCalculator = new AreaCalculator();
         Square square = new Square(4);
         Circle circle = new Circle(5);
+        Rectangle rectangle = new Rectangle(2,3);
+        Cube cube = new Cube(3);
 
-        List<Shape> shapes = List.of(square, circle);
+        List<Shape> shapes = List.of(square, circle, rectangle, cube);
         areaCalculator.sum(shapes);
 
         ShapesPrinter printer = new ShapesPrinter(areaCalculator);
